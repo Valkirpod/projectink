@@ -8,5 +8,7 @@ A top-down exploration game with fast dodging, weird characters, and an inky wor
 
 ## Team
 V - Lead Developmer / Director
+
 A - Programmer
+
 K - Artist

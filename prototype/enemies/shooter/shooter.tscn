@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://duign4gft5h05"]
+
+[ext_resource type="Script" uid="uid://4qeffls2vc8t" path="res://enemies/shooter/shooter.gd" id="1_kkjre"]
+[ext_resource type="PackedScene" uid="uid://d3hs3ulupl5oi" path="res://objects/projectile/projectile.tscn" id="2_rlg6k"]
+
+[sub_resource type="Gradient" id="Gradient_kqu6x"]
+offsets = PackedFloat32Array(0, 0.6533333, 0.7, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oul6g"]
+gradient = SubResource("Gradient_kqu6x")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kqu6x"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oul6g"]
+radius = 30.0
+
+[node name="Shooter" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_kkjre")
+projectile_scene = ExtResource("2_rlg6k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("GradientTexture2D_oul6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kqu6x")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_oul6g")

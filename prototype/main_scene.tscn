@@ -1,0 +1,596 @@
+[gd_scene load_steps=7 format=3 uid="uid://cakk7htl5b6hx"]
+
+[ext_resource type="PackedScene" uid="uid://l7ye7wnwasbs" path="res://player/player.tscn" id="1_0f027"]
+[ext_resource type="PackedScene" uid="uid://ctgrpxye37tef" path="res://wall.tscn" id="2_2c62f"]
+[ext_resource type="PackedScene" uid="uid://duign4gft5h05" path="res://enemies/shooter/shooter.tscn" id="3_gyfs4"]
+[ext_resource type="PackedScene" uid="uid://cis7o3qaqcjdc" path="res://enemies/charger/charger.tscn" id="4_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://gfwmmtpau16c" path="res://objects/lava/lava.tscn" id="5_8mm7a"]
+[ext_resource type="PackedScene" uid="uid://bge26ybpqkfrt" path="res://timer.tscn" id="6_hq1ik"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0f027")]
+position = Vector2(-1, -3)
+
+[node name="Map" type="Node" parent="."]
+
+[node name="Wall" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(0, 128)
+
+[node name="Wall2" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(120, 128)
+
+[node name="Wall4" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-120, 128)
+
+[node name="Wall23" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, 128)
+
+[node name="Wall24" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, 128)
+
+[node name="Wall5" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-240, 128)
+
+[node name="Wall3" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(240, 128)
+
+[node name="Wall6" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(360, 128)
+
+[node name="Wall7" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-360, 128)
+
+[node name="Wall8" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-480, 128)
+
+[node name="Wall9" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(480, 128)
+
+[node name="Wall32" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(0, -1192)
+
+[node name="Wall33" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(120, -1192)
+
+[node name="Wall34" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-120, -1192)
+
+[node name="Wall35" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -1192)
+
+[node name="Wall36" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, -1192)
+
+[node name="Wall37" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-240, -1192)
+
+[node name="Wall38" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(240, -1192)
+
+[node name="Wall39" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(360, -1192)
+
+[node name="Wall40" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-360, -1192)
+
+[node name="Wall41" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-480, -1192)
+
+[node name="Wall42" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(480, -1192)
+
+[node name="Wall10" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, 8)
+
+[node name="Wall11" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, 8)
+
+[node name="Wall12" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -112)
+
+[node name="Wall13" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -232)
+
+[node name="Wall14" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, -112)
+
+[node name="Wall15" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, -232)
+
+[node name="Wall16" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, -352)
+
+[node name="Wall17" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -352)
+
+[node name="Wall18" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -472)
+
+[node name="Wall21" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -592)
+
+[node name="Wall22" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -712)
+
+[node name="Wall19" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(600, -472)
+
+[node name="Wall26" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -832)
+
+[node name="Wall28" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -952)
+
+[node name="Wall30" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(-600, -1072)
+
+[node name="Wall43" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1200, 128)
+
+[node name="Wall44" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1320, 128)
+
+[node name="Wall45" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1080, 128)
+
+[node name="Wall46" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, 128)
+
+[node name="Wall47" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(960, 128)
+
+[node name="Wall48" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1440, 128)
+
+[node name="Wall49" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1560, 128)
+
+[node name="Wall50" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(840, 128)
+
+[node name="Wall51" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(720, 128)
+
+[node name="Wall52" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1680, 128)
+
+[node name="Wall53" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1200, -1192)
+
+[node name="Wall54" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1320, -1192)
+
+[node name="Wall55" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1080, -1192)
+
+[node name="Wall56" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -1192)
+
+[node name="Wall57" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(960, -1192)
+
+[node name="Wall58" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1440, -1192)
+
+[node name="Wall59" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1560, -1192)
+
+[node name="Wall60" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(840, -1192)
+
+[node name="Wall61" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(720, -1192)
+
+[node name="Wall62" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1680, -1192)
+
+[node name="Wall63" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, 8)
+
+[node name="Wall64" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -112)
+
+[node name="Wall65" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -232)
+
+[node name="Wall66" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -352)
+
+[node name="Wall67" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -472)
+
+[node name="Wall68" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -592)
+
+[node name="Wall69" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -712)
+
+[node name="Wall70" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -832)
+
+[node name="Wall71" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -952)
+
+[node name="Wall72" parent="Map" instance=ExtResource("2_2c62f")]
+position = Vector2(1800, -1072)
+
+[node name="Shooter" parent="." instance=ExtResource("3_gyfs4")]
+position = Vector2(1208, -1000)
+
+[node name="Shooter2" parent="." instance=ExtResource("3_gyfs4")]
+position = Vector2(1632, -48)
+
+[node name="Charger" parent="." instance=ExtResource("4_d5x1h")]
+position = Vector2(-360, -992)
+
+[node name="Charger2" parent="." instance=ExtResource("4_d5x1h")]
+position = Vector2(440, -624)
+
+[node name="Charger3" parent="." instance=ExtResource("4_d5x1h")]
+position = Vector2(832, -72)
+
+[node name="Charger4" parent="." instance=ExtResource("4_d5x1h")]
+position = Vector2(-424, -240)
+
+[node name="Lava" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-152, -352)
+
+[node name="Lava2" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-216, -352)
+
+[node name="Lava3" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-280, -352)
+
+[node name="Lava4" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-344, -352)
+
+[node name="Lava31" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -544)
+
+[node name="Lava32" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -608)
+
+[node name="Lava33" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -672)
+
+[node name="Lava34" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -736)
+
+[node name="Lava35" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -800)
+
+[node name="Lava36" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -864)
+
+[node name="Lava37" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -928)
+
+[node name="Lava38" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -992)
+
+[node name="Lava39" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -1056)
+
+[node name="Lava40" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(568, -1120)
+
+[node name="Lava41" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -544)
+
+[node name="Lava42" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -608)
+
+[node name="Lava43" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -672)
+
+[node name="Lava44" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -736)
+
+[node name="Lava45" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -800)
+
+[node name="Lava46" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -864)
+
+[node name="Lava47" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -928)
+
+[node name="Lava48" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -992)
+
+[node name="Lava49" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -1056)
+
+[node name="Lava50" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(632, -1120)
+
+[node name="Lava5" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-88, -352)
+
+[node name="Lava11" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -736)
+
+[node name="Lava12" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -736)
+
+[node name="Lava13" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -736)
+
+[node name="Lava14" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -736)
+
+[node name="Lava15" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -736)
+
+[node name="Lava16" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -672)
+
+[node name="Lava17" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -672)
+
+[node name="Lava18" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -672)
+
+[node name="Lava19" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -672)
+
+[node name="Lava20" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -672)
+
+[node name="Lava21" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -608)
+
+[node name="Lava22" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -608)
+
+[node name="Lava23" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -608)
+
+[node name="Lava24" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -608)
+
+[node name="Lava25" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -608)
+
+[node name="Lava26" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -544)
+
+[node name="Lava27" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -544)
+
+[node name="Lava28" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -544)
+
+[node name="Lava29" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -544)
+
+[node name="Lava30" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -544)
+
+[node name="Lava51" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -736)
+
+[node name="Lava52" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -736)
+
+[node name="Lava53" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -736)
+
+[node name="Lava54" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -736)
+
+[node name="Lava55" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -736)
+
+[node name="Lava56" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -672)
+
+[node name="Lava57" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -672)
+
+[node name="Lava58" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -672)
+
+[node name="Lava59" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -672)
+
+[node name="Lava60" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -672)
+
+[node name="Lava61" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -608)
+
+[node name="Lava62" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -608)
+
+[node name="Lava63" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -608)
+
+[node name="Lava64" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -608)
+
+[node name="Lava65" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -608)
+
+[node name="Lava66" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -544)
+
+[node name="Lava67" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -544)
+
+[node name="Lava68" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -544)
+
+[node name="Lava69" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -544)
+
+[node name="Lava70" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -544)
+
+[node name="Lava71" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -480)
+
+[node name="Lava72" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -480)
+
+[node name="Lava73" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -480)
+
+[node name="Lava74" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -480)
+
+[node name="Lava75" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -480)
+
+[node name="Lava76" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -416)
+
+[node name="Lava77" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -416)
+
+[node name="Lava78" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -416)
+
+[node name="Lava79" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -416)
+
+[node name="Lava80" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -416)
+
+[node name="Lava81" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -352)
+
+[node name="Lava82" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -352)
+
+[node name="Lava83" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -352)
+
+[node name="Lava84" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -352)
+
+[node name="Lava85" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -352)
+
+[node name="Lava86" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1464, -288)
+
+[node name="Lava87" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1400, -288)
+
+[node name="Lava88" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1336, -288)
+
+[node name="Lava89" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1272, -288)
+
+[node name="Lava90" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1528, -288)
+
+[node name="Lava91" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -480)
+
+[node name="Lava92" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -480)
+
+[node name="Lava93" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -480)
+
+[node name="Lava94" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -480)
+
+[node name="Lava95" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -480)
+
+[node name="Lava96" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -416)
+
+[node name="Lava97" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -416)
+
+[node name="Lava98" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -416)
+
+[node name="Lava99" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -416)
+
+[node name="Lava100" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -416)
+
+[node name="Lava101" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -352)
+
+[node name="Lava102" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -352)
+
+[node name="Lava103" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -352)
+
+[node name="Lava104" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -352)
+
+[node name="Lava105" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -352)
+
+[node name="Lava106" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1144, -288)
+
+[node name="Lava107" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1080, -288)
+
+[node name="Lava108" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1016, -288)
+
+[node name="Lava109" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(952, -288)
+
+[node name="Lava110" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(1208, -288)
+
+[node name="Lava6" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(296, -352)
+
+[node name="Lava7" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(232, -352)
+
+[node name="Lava8" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(168, -352)
+
+[node name="Lava9" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(104, -352)
+
+[node name="Lava10" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(360, -352)
+
+[node name="Lava111" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-168, -832)
+
+[node name="Lava112" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-232, -832)
+
+[node name="Lava113" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-296, -832)
+
+[node name="Lava114" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-360, -832)
+
+[node name="Lava115" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(-104, -832)
+
+[node name="Lava116" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(280, -832)
+
+[node name="Lava117" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(216, -832)
+
+[node name="Lava118" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(152, -832)
+
+[node name="Lava119" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(88, -832)
+
+[node name="Lava120" parent="." instance=ExtResource("5_8mm7a")]
+position = Vector2(344, -832)
+
+[node name="Timer" parent="." instance=ExtResource("6_hq1ik")]

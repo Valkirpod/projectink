@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cis7o3qaqcjdc"]
+
+[ext_resource type="Script" uid="uid://dngu7bapu60a7" path="res://enemies/charger/charger.gd" id="1_3arvj"]
+
+[sub_resource type="Gradient" id="Gradient_kqu6x"]
+offsets = PackedFloat32Array(0, 0.6533333, 0.7, 1)
+colors = PackedColorArray(1, 0.54509807, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oul6g"]
+gradient = SubResource("Gradient_kqu6x")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kqu6x"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oul6g"]
+radius = 30.0
+
+[node name="Charger" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_3arvj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("GradientTexture2D_oul6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kqu6x")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_oul6g")
+
+[node name="Line2D" type="Line2D" parent="."]

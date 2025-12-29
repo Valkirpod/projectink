@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://l7ye7wnwasbs"]
+
+[ext_resource type="Script" uid="uid://bv7n6ljqi746t" path="res://player/player.gd" id="1_oul6g"]
+
+[sub_resource type="Gradient" id="Gradient_kqu6x"]
+offsets = PackedFloat32Array(0, 0.6533333, 0.7, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oul6g"]
+gradient = SubResource("Gradient_kqu6x")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kqu6x"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oul6g"]
+radius = 20.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+script = ExtResource("1_oul6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("GradientTexture2D_oul6g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kqu6x")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_oul6g")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)

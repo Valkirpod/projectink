@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://gfwmmtpau16c"]
+
+[ext_resource type="Script" uid="uid://chn6cesf2d6k" path="res://objects/lava/lava.gd" id="1_hb6ha"]
+
+[sub_resource type="Gradient" id="Gradient_kqu6x"]
+offsets = PackedFloat32Array(0, 0.18666667, 0.6533333, 0.7, 1)
+colors = PackedColorArray(0.4509804, 0, 0, 1, 1, 0, 0, 1, 0.90699065, 0.77595305, 0.47576207, 1, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dtvjp"]
+gradient = SubResource("Gradient_kqu6x")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1.5, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_al1m4"]
+size = Vector2(64, 64)
+
+[node name="Lava" type="Area2D"]
+z_index = -1
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_hb6ha")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("GradientTexture2D_dtvjp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_al1m4")
